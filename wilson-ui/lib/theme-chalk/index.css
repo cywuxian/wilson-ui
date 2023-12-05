@@ -1,0 +1,17 @@
+:root {
+    /* 主题颜色 */
+    --primary-color: #1768B4;
+    /* 副主题颜色 */
+    --sub-primary-color: #F5F7FA;
+    /* 文字颜色 */
+    --text-color: #333;
+    /* 明细文字颜色 */
+    --text-info-color: #606266;
+    /* 边框颜色 */
+    --border-color: #DCDFE6;
+}
+
+@import url('./form//form.css');
+@import url('./right-menu/right-menu.css');
+@import url('./verify-number/verify-number.css');
+@import url('./image-viewers/image-viewers.css');

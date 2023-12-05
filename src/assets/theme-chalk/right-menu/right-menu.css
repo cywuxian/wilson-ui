@@ -1,0 +1,33 @@
+.zy-right-meun-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.zy-right-meun-body-list {
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 120px;
+    padding: 4px;
+    box-shadow: 0px 4px 10px 0px rgba(195, 208, 228, 0.3);
+}
+
+.zy-right-meun-body-list-item {
+    padding: 4px 12px;
+    font-size: 14px;
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.zy-right-meun-body-list-item:hover {
+    background-color: var(--primary-color);
+}
