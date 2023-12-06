@@ -20,13 +20,13 @@ call cd %CD%/%packageName%
 
 @REM 替换版本号
 set findVersionStr=1.0.0
-set finPackageName=packageName
 call set str=%%str:%findVersionStr%=%version%%%
-call set str=%%str:%finPackageName%=%packageName%%%
 
 @REM 生成package文件
 call echo %str% > package.json
 @REM 发布到npm组件库
 call npm  publish
 }
-
+call git add .
+call git commit -m 'fix:代码提交'
+call git push origin main

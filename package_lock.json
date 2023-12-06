@@ -1,8 +1,8 @@
 {
-    "name": "packageName",
+    "name": "wilson-ui",
     "version": "1.0.0",
     "description": "",
-    "main": "packageName.common.js",
+    "main": "wilson-ui.common.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
