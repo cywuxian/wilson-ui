@@ -90,7 +90,8 @@ export default {
         if (row.tag.indexOf('zy-form-group-row') == -1) continue
 
         // 如果设置了指定列宽，则用指定的，否则根据设置的列数作平均
-        let colSpan = row.componentOptions.propsData.colSpan ?? this.colSpan
+        let propsSpan = row.componentOptions.propsData.colSpan
+        let colSpan = propsSpan > 0 ? propsSpan : this.colSpan
         if (colSpan > 24) {
           colSpan = 1
         }
