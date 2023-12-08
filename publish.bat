@@ -27,6 +27,3 @@ call echo %str% > package.json
 @REM 发布到npm组件库
 call npm  publish
 }
-call git add .
-call git commit -m 'fix:代码提交'
-call git push origin main
