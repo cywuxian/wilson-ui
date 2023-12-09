@@ -1,16 +1,23 @@
 const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
 module.exports = defineConfig({
-  runtimeCompiler: true,
+  lintOnSave: false,
   transpileDependencies: true,
-  publicPath: "./",
-  devServer: {
-    host: '0.0.0.0',
-    port: 8080,
-    proxy: {
-      ['/zy-park']: {
-        target: 'http://192.168.1.103:10701',
-        changeOrigin: true,
-      }
+  pages: {
+    index: {
+      entry: 'examples/main.js',
+      template: 'public/index.html',
+      filename: 'index.html'
     }
+  },
+  chainWebpack: config => {
+    config.module
+      .rule('js')
+      .include.add(path.resolve(__dirname, 'packages')).end()
+      .use('babel')
+      .loader('babel-loader')
+      .tap(options => {
+        return options
+      })
   }
 })
