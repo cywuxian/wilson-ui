@@ -92,7 +92,7 @@ export default {
       for (let i = 0; i < slots.length; i++) {
         const row = slots[i];
         //过滤掉所有非zy-form-group-row组件
-        if (row.tag.indexOf("zy-form-group-row") == -1) continue;
+        if (!row.tag || row.tag.indexOf("zy-form-group-row") == -1) continue;
 
         // 如果设置了指定列宽，则用指定的，否则根据设置的列数作平均
         let propsSpan = row.componentOptions.propsData.colSpan;
