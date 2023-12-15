@@ -20,18 +20,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm i
-      - run: npm run lib
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm run lib
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{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}}
+            # 通过NPM_TOKEN，Github Action才可以直接发布
+          NODE_AUTH_TOKEN: ${{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}} 
+
