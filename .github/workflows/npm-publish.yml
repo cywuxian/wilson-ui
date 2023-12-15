@@ -6,6 +6,11 @@ name: wilson-ui
 on:
   release:
     types: [created]
+  push:
+      #分支可以选择多个，如：master、main、release
+      #监听main分支的push操作，只要main分支发生push操作，即会运行发布代码
+    branches:
+      - release
 
 jobs:
   build:
@@ -30,4 +35,4 @@ jobs:
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{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}}
