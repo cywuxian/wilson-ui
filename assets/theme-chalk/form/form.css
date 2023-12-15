@@ -119,8 +119,9 @@
     border-right: 1px solid var(--border-color);
 }
 
-.zy-form-gtoup-row-content {
+.zy-form-group-row-content {
     padding: 13px 20px;
     background-color: #fff;
     width: 100%;
+    word-break: break-all;
 }
