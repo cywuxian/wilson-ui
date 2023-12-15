@@ -26,5 +26,5 @@ jobs:
       - run: npm publish
         env:
             # 通过NPM_TOKEN，Github Action才可以直接发布
-          NODE_AUTH_TOKEN: ${{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}} 
+          NODE_AUTH_TOKEN: ${{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}} 
 
